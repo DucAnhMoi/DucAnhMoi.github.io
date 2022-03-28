@@ -1,0 +1,277 @@
+/* Sign in and Sign up */
+.sign_form{
+    background-color: var(--color-sign-change-1);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/* sign background */
+.sign_form-bg{
+    height: 540px;
+    width: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/* background contain button */
+.sign_form-main-btn{
+    height: 453.6px;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sign_form-main-btn-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    transition: all 0.5s;
+}
+.sign_form-main-title{
+    font-weight: 500;
+    color: white;
+    margin: 16px 8px;
+    text-align: center;
+}
+.sign_form-main-btn-up{
+    color: black;
+    background-color: white;
+}
+.sign_form-main-btn-up:hover{
+    color: white;
+    background-color: var(--primary-color-sign-in);
+}
+.sign_form-main-btn-in {
+    color: black;
+    background-color: white;
+}
+.sign_form-main-btn-in:hover{
+    color: white;
+    background-color: var(--primary-color-sign-up);
+}
+/* background contain form */
+.sign_form-main{
+    background-color: white;
+    height: 540px;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+.sign_form-main-change{
+    left: 50%;
+}
+/* Form sign in */
+.sign_form-in{
+    margin: 0 32px 0 32px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 540px;
+    width: 336px;
+    transition: 1s all;
+    transition-delay: 0.3s;
+}    
+.sign_form-in-change{
+    left: -100%
+}
+/* Form sign up */
+.sign_form-up{
+    margin: 0 32px 0 32px;
+    left: 200%;
+    top: 0;
+    position: absolute;
+    height: 540px;
+    width: 336px;
+    transition: 1s all;
+    transition-delay: 0.3s;
+}
+.sign_form-up-change{
+    left: 0;
+}
+/* Form */
+.sign_form-header{
+    color: var(--color-sign-change-1);
+    font-size: 48px;
+    font-weight: 600;
+    margin: 32px 0 0 0;
+}
+.sign_form-title{
+    font-size: 14px;
+    font-weight: 500;
+    width: 200px;
+    color: var(--text-color-sign);
+    margin: 0 0 24px 0;
+}
+.sign_form-header-title{
+    color: var(--color-sign-change-1);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+/* Input form */
+.sign_form-group{
+    display: flex;
+    flex-direction: column;
+}
+.input-box{
+    margin: 8px 0px 8px 0;
+    position: relative;
+}
+.sign_form-group input{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+    outline: none;
+    line-height: 16px;
+}
+.sign_form-group label{
+    font-size: 12px;
+}
+.sign_form-message{
+    margin-left: 8px;
+    color: red;
+    font-size: 12px;
+}
+
+/* Sign form outline */
+.sign_form-outline1{
+    position: absolute;
+    background-color: var(--color-sign-change-1);
+    height: 2px;
+    width: 0;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+.sign_form-outline2{
+    position: absolute;
+    background-color: var(--color-sign-change-1);
+    height: 0;
+    width: 2px;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+.sign_form-outline3{
+    position: absolute;
+    background-color: var(--color-sign-change-1);
+    height: 0;
+    width: 2px;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s;
+}
+.sign_form-outline4{
+    position: absolute;
+    background-color: var(--color-sign-change-1);
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s;
+}
+
+.sign_form-group input:focus ~ .sign_form-outline1{
+    width: 100%;
+}
+.sign_form-group input:focus ~ .sign_form-outline2{
+    height: 100%;
+}
+.sign_form-group input:focus ~ .sign_form-outline3{
+    height: 100%;
+}
+.sign_form-group input:focus ~ .sign_form-outline4{
+    width: 100%;
+}
+/* sign form support */
+.sign_form-group-support{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0 8px 0;
+}
+.sign_form-forgetps{
+    color: var(--text-color-sign);
+}
+
+.sign_form-rememberps-box{
+    display: flex;
+    align-items: center;
+}
+
+.sign_form-rememberps-checkbox{
+    height: 14px;
+    width: 14px;
+    margin-right: 8px;
+    cursor: pointer;
+}   
+
+/* Sign form or */
+.sign_form-group-or{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign_form-group-or-line{
+    height: 1px;
+    flex: 1;
+    background-color: var(--border-color);
+}
+
+.sign_form-group-or-title{
+    margin: 0 8px;
+}
+
+/* Sign form other */
+.sign_form-group-other{
+    display: flex;
+    margin: 16px 0 8px;
+    justify-content: space-between;
+}
+
+.sign_form-group-other-item{
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    border: solid var(--border-color) 1px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 45%;
+    justify-content: center;
+}
+
+.sign_form-group-other-item:hover i{
+    color: var(--primary-color-sign-in);
+}
+
+.sign_form-group-other-item i{
+    color: var(--primary-color-sign-up);
+    margin-right: 8px;
+    font-size: 18px;
+    align-self: center;
+}
+
+/* sign form login and register btn */
+.sign_form-submit{
+    margin-top: 8px; 
+    background-color: var(--color-sign-change-1);
+    color: white;
+}
+.sign_form-submit:hover{
+    background-color: var(--color-sign-change-2);
+}
+
+.invalid{
+    background-color: pink;
+}
