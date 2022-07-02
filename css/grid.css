@@ -1,0 +1,11 @@
+.grid {
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0 10px;
+}
+
+.grid.wide{
+    max-width: 1170px;
+    margin: 0 auto;
+}

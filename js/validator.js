@@ -1,3 +1,6 @@
+$ = document.querySelector.bind(document)
+$$ = document.querySelectorAll.bind(document)
+
 function Validator(dataValidator) {
     // function handle validate
     function validate(input, ruleList) {
@@ -28,6 +31,7 @@ function Validator(dataValidator) {
                 dataValidator.rules.forEach(function (rule) {
                     selectorList.push(rule.selector)
                 })
+                // get rules run func validate
                 selectorList.forEach(function (selector) {
                     var inputElement = formElement.querySelector(selector)
                     if (inputElement) {
@@ -41,20 +45,62 @@ function Validator(dataValidator) {
                     }
                 })
             }
+            // Data Sign In
             var DataSignInList = []
-            for (i in formElement.querySelectorAll(".sign_form-message")){
-                if (formElement.querySelectorAll(".sign_form-message")[i].outerText == ""){
+            var DataSignInListO = {
+                userName: "a",
+                email: "a",
+                password: "a"
+            }
+            // Get data input user enter
+            for (i in formElement.querySelectorAll(".sign_form-message")) {
+                if (formElement.querySelectorAll(".sign_form-message")[i].outerText == "") {
                     DataSignInList.push(formElement.querySelectorAll(".sign_form-message")[i].parentElement.querySelector(".input-box").querySelector("input").value)
                 }
-                else{
+                else {
                     break
                 }
             }
+            // return Data to server to compare
+            DataSignInListO.userName = DataSignInList[0]
+            DataSignInListO.password = DataSignInList[1]
+
+            // Data on server
+            var AccSignIn = [
+                {
+                    userName: "ducanh123",
+                    email: "tducanh123@gmail.com",
+                    password: "123456"
+                },
+                {
+                    userName: "ducanh263",
+                    email: "tducanh263@gmail.com",
+                    password: "123456"
+                },
+                {
+                    userName: "ducanh6797",
+                    email: "tducanh6797@gmail.com",
+                    password: "123456"
+                },
+                {
+                    userName: "ducanh107",
+                    email: "tducanh107@gmail.com",
+                    password: "123456"
+                }
+            ]
+            // compare data server and input user enter
+            AccSignIn.forEach((AccSignInitem) => {
+                if ((AccSignInitem.userName == DataSignInListO.userName) && (AccSignInitem.password == DataSignInListO.password)) {
+                    document.querySelector(".sign_form").style.display = "none"
+                    console.log(1)
+                }
+            })
         }
         // onclick sign up
         submitBtn[1].onclick = function () {
             // check validate
             formElement = submitBtn[1].parentElement
+            // get rule to validate
             if (formElement) {
                 selectorList = []
                 dataValidator.rules.forEach(function (rule) {
@@ -73,58 +119,64 @@ function Validator(dataValidator) {
                     }
                 })
             }
+            // data Sign up
             var DataSignUpList = []
             var DataSignUpListO = {
                 userName: "a",
                 email: "a",
                 password: "a"
             }
-            for (i in formElement.querySelectorAll(".sign_form-message")){
-                if (formElement.querySelectorAll(".sign_form-message")[i].outerText == ""){
+            // Get data user enter
+            for (i in formElement.querySelectorAll(".sign_form-message")) {
+                if (formElement.querySelectorAll(".sign_form-message")[i].outerText == "") {
                     DataSignUpList.push(formElement.querySelectorAll(".sign_form-message")[i].parentElement.querySelector(".input-box").querySelector("input").value)
                 }
-                else{
+                else {
                     break
                 }
             }
+            // get data to return
             DataSignUpListO.userName = DataSignUpList[0]
             DataSignUpListO.email = DataSignUpList[1]
             DataSignUpListO.password = DataSignUpList[2]
-            console.log(DataSignUpListO)
         }
     }
-
-            formElement = document.querySelector(dataValidator.form)
-            if (formElement) {
-                selectorList = []
-                dataValidator.rules.forEach(function (rule) {
-                    selectorList.push(rule.selector)
-                })
-                selectorList.forEach(function (selector, index) {
-                    var inputElement = formElement.querySelector(selector)
-                    if (inputElement) {
-                        inputElement.onblur = function () {
-                            rulesList = []
-                            dataValidator.rules.forEach(function (rule) {
-                                if (rule.selector == selector) {
-                                    rulesList.push(rule)
-                                }
-                            })
-                            validate(inputElement, rulesList)
+    // get form 
+    formElement = document.querySelector(dataValidator.form)
+    if (formElement) {
+        selectorList = []
+        // get rule to validate
+        dataValidator.rules.forEach(function (rule) {
+            selectorList.push(rule.selector)
+        })
+        selectorList.forEach(function (selector, index) {
+            var inputElement = formElement.querySelector(selector)
+            if (inputElement) {
+                inputElement.onblur = function () {
+                    rulesList = []
+                    dataValidator.rules.forEach(function (rule) {
+                        if (rule.selector == selector) {
+                            rulesList.push(rule)
                         }
-                    }
-                    inputElement.oninput = function () {
-                        var errorElement = inputElement.parentElement.parentElement.querySelector(dataValidator.errorSelector)
-                        errorElement.innerText = "";
-                        inputElement.classList.remove("invalid")
-                    }
-                })
+                    })
+                    validate(inputElement, rulesList)
+                }
             }
-            validateSubmit(document.querySelectorAll(".sign_form-submit"))
-        }
+            // handle when user enter
+            inputElement.oninput = function () {
+                var errorElement = inputElement.parentElement.parentElement.querySelector(dataValidator.errorSelector)
+                errorElement.innerText = "";
+                inputElement.classList.remove("invalid")
+            }
+        })
+    }
+    // run func when user submit
+    validateSubmit(document.querySelectorAll(".sign_form-submit"))
+}
 
 
 // Rules Validator
+// check emty
 Validator.isRequired = function (selector, message) {
     return {
         selector: selector,
@@ -133,6 +185,7 @@ Validator.isRequired = function (selector, message) {
         }
     }
 }
+// check email
 Validator.isEmail = function (selector, message) {
     return {
         selector: selector,
@@ -142,6 +195,7 @@ Validator.isEmail = function (selector, message) {
         }
     }
 }
+// check password re-enter
 Validator.isPasswordConfirmation = function (selector, valuePassword, formE, message) {
     return {
         selector: selector,
@@ -152,6 +206,7 @@ Validator.isPasswordConfirmation = function (selector, valuePassword, formE, mes
         }
     }
 }
+// check min length user enter
 Validator.minLength = function (selector, min, message) {
     return {
         selector: selector,

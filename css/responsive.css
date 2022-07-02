@@ -22,10 +22,323 @@
 }
 /* mobile */
 @media only screen and (max-width: 739px){
-
+    .header{
+        margin: 0 16px;
+    }
+    .header-menu-top{
+        height: 112px;
+    }
+    .header-logo{
+        height: 112px;
+    }
+    .header-line{
+        height: 112px;
+    }
+    .content{
+        width:fit-content;
+    }
+    .header-menu-top-list{
+        display: none;
+    }
+    .content-slider-poster{
+        display: none;
+    }
+    .content-slider-poster-main{
+        display: block;
+    }
+    .content-main{
+        flex-direction: column;
+    }
+    .content-main-option{
+        width: 100%;
+    }
+    .content-main-option-title{
+        text-align: center;
+    }
+    .content-main-option-part{
+        padding: 0 32px;
+    }
+    .content-main-option-list{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        list-style: none;
+    }
+    .content-main-option-item{
+        position: relative;
+        padding: 0px 10px;
+        width: auto;
+    }
+    .content-main-option-item-poster img{
+        height: 200px;
+        width: 200px;
+    }
+    .content-main-option-item.col2.mv{
+        width: auto;
+    }
+    .content-main-option-item.col2.mv img{
+        width: 533px;
+        height: 299px;
+    }
+    .content-main-option-item.col4{
+        width: auto;
+    }
+    .content-main-option-item.col4 img{
+        width: 253.5px;
+        height: 141.7px;
+    }
+    .content-main-option-item.col2 img{
+        width: 78px;
+        height: 78px;
+    }
+    .content-main-option-item-name{
+        font-size: 18.2px;
+    }
+    .content-main-option-item-name-singer{
+        font-size: 15.6px;
+    }
+    .content-main-option-title{
+        font-size: 33.8px;
+    }
+    .content-main-option-item p{
+        font-size: 15.6px;
+    }
+    .content-main-option-item-name-in-img{
+        font-size: 23.4px;
+    }
+    .content-main-option-item-name-box p{
+        font-size: 15.6px;
+    }
+    .content-main-option-item-time, .content-main-option-item-time-col2{
+        font-size: 18.2px;
+    }
+    .content-main-option-item-time-col2{
+        bottom: 30%;
+    }
+    .content-main-option-item .content-main-option-item-name{
+        width: 197.6px;
+    }
+    .content-main-option-item.col2 .content-main-option-item-name{
+        width: 533px;
+    }
+    .content-main-option-item.col4 .content-main-option-item-name{
+        width: 253.5px;
+    }
+    .content-main-option-item-name-song a{
+        font-size: 18.2px;
+    }
+    .content-main-option-item-viw-i{
+        font-size: 18.2px;
+    }
+    .content-main-option-item-viw-quantity{
+        font-size: 18.2px;
+    }
+    .header-top{
+        width: fit-content;
+    }
+    .content-slider-btn{
+        justify-content: space-around;
+        display: flex;
+    }
+    .content-slider-btn-left{
+        margin-right: 250px;
+    }
+    .content-slider-btn-right{
+        margin-left: 250px;
+    }
+    .content-main-sub{
+        width: auto;
+    }
+    .content-main-option-part-slider{
+        width: auto;
+        margin: 0 349px;
+        justify-content: center;
+        height: 41.6px;
+    }
+    .content-main-option-part-slider-item{
+        line-height: 41.6px;
+        width: 136px;
+    }
+    .content-main-sub-song-box-active{
+        padding-left: 32px;
+    }
+    .content-main-sub-song-main-title{
+        justify-content: center;
+    }
+    .content-main-sub-song-main-title a{
+        font-size: 32px;
+    }
+    .content-main-sub-song-main-artist{
+        font-size: 24px;
+    }
+    .content-main-sub-song-sub{
+        align-items: center;
+    }
+    .content-main-sub-song-sub-stt{
+        line-height: 32px;    
+    }
+    .header-logo-img img {
+        height: 64px;
+        width: 128px;
+    }
+    .header-logo-img1 img {
+        width: 192px;
+        height: 64px;
+    }
+    .header-container-search-box input{
+        height: 32px;
+        width: 256px;
+    }
 }
 
 /* tablet */
-@media only screen and (min-width: 740px) and (max-width: 1023px){
+@media only screen and (min-width: 740px) and (max-width: 1180px){
+    .header{
+        margin: 0 16px;
+    }
+    .content{
+        width:fit-content;
+    }
+    .header-menu-top-list{
+        display: none;
+    }
+    .content-slider-poster{
+        display: none;
+    }
+    .content-slider-poster-main{
+        display: block;
+    }
+    .content-main{
+        flex-direction: column;
+    }
+    .content-main-option{
+        width: 100%;
+    }
+    .content-main-option-title{
+        text-align: center;
+    }
+    .content-main-option-part{
+        padding: 0 32px;
+    }
+    .content-main-option-list{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        list-style: none;
+    }
+    .content-main-option-item{
+        position: relative;
+        padding: 0px 10px;
+        width: auto;
+    }
+    .content-main-option-item-poster img{
+        height: 200px;
+        width: 200px;
+    }
+    .content-main-option-item.col2.mv{
+        width: auto;
+    }
+    .content-main-option-item.col2.mv img{
+        width: 533px;
+        height: 299px;
+    }
+    .content-main-option-item.col4{
+        width: auto;
+    }
+    .content-main-option-item.col4 img{
+        width: 253.5px;
+        height: 141.7px;
+    }
+    .content-main-option-item.col2 img{
+        width: 78px;
+        height: 78px;
+    }
+    .content-main-option-item-name{
+        font-size: 18.2px;
+    }
+    .content-main-option-item-name-singer{
+        font-size: 15.6px;
+    }
+    .content-main-option-title{
+        font-size: 33.8px;
+    }
+    .content-main-option-item p{
+        font-size: 15.6px;
+    }
+    .content-main-option-item-name-in-img{
+        font-size: 23.4px;
+    }
+    .content-main-option-item-name-box p{
+        font-size: 15.6px;
+    }
+    .content-main-option-item-time, .content-main-option-item-time-col2{
+        font-size: 18.2px;
+    }
+    .content-main-option-item-time-col2{
+        bottom: 30%;
+    }
+    .content-main-option-item .content-main-option-item-name{
+        width: 197.6px;
+    }
+    .content-main-option-item.col2 .content-main-option-item-name{
+        width: 533px;
+    }
+    .content-main-option-item.col4 .content-main-option-item-name{
+        width: 253.5px;
+    }
+    .content-main-option-item-name-song a{
+        font-size: 18.2px;
+    }
+    .content-main-option-item-viw-i{
+        font-size: 18.2px;
+    }
+    .content-main-option-item-viw-quantity{
+        font-size: 18.2px;
+    }
+    .header-top{
+        width: fit-content;
+    }
+    .content-slider-btn{
+        justify-content: space-around;
+        display: flex;
+    }
+    .content-slider-btn-left{
+        margin-right: 250px;
+    }
+    .content-slider-btn-right{
+        margin-left: 250px;
+    }
+    .content-main-sub{
+        width: auto;
+    }
+    .content-main-option-part-slider{
+        width: auto;
+        margin: 0 349px;
+        justify-content: center;
+        height: 41.6px;
+    }
+    .content-main-option-part-slider-item{
+        line-height: 41.6px;
+        width: 136px;
+    }
+    .content-main-sub-song-box-active{
+        padding-left: 32px;
+    }
+    .content-main-sub-song-main-title{
+        justify-content: center;
+    }
+    .content-main-sub-song-main-title a{
+        font-size: 32px;
+    }
+    .content-main-sub-song-main-artist{
+        font-size: 24px;
+    }
+    .content-main-sub-song-sub{
+        align-items: center;
+    }
+    .content-main-sub-song-sub-stt{
+        line-height: 32px;    
+    }
 }
+
     
